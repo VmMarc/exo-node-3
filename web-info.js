@@ -1,4 +1,4 @@
-const jsdom = require("jsdom")
+const jsdom = require('jsdom')
 const { JSDOM } = jsdom
 const axios = require('axios')
 
@@ -20,14 +20,15 @@ const main = async () => {
       //console.log(nbImgs.length)
       const contentLength = response.headers['content-length']
       //console.log(contentLength)
+      // Correction iil te suffisait d'ecrire ton objet info ci dessous
+      // pour compléter l'exercice. Dommage.
       const info = {
         url: urlTag,
         contentLength: contentLength,
         title: titleTag,
         nbUrls: links,
-        nbImgs: nbImgs
+        nbImgs: nbImgs,
       }
-
     } catch (e) {
       console.log(e.message)
     }
